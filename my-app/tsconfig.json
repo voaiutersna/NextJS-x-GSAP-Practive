@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-  ],
+, "app/Tester", "app/(Workshop)/work1", "app/(Workshop)/work2", "app/(Workshop)/work3", "app/(Workshop)/work4"  ],
   "exclude": ["node_modules"]
 }
