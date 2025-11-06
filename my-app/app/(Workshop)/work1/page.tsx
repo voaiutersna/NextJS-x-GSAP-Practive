@@ -8,7 +8,7 @@ export default function Workshop_one(){
     const boxes = container.current.querySelectorAll(".box"); // ✅ จับทุกกล่องข้างใน
     gsap.from(boxes,{
       y:200,
-      ease: "back.out(1.7)",
+      ease: "back.out(3)", // ← เลยไป 3 แล้วกลับมา
       stagger: 0.08, // ← ไล่ทีละชิ้น
       duration: 3
     })
