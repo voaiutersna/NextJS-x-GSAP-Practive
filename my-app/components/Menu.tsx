@@ -8,7 +8,7 @@ const MENU_LINKS = [
   { path: "/Frieren", label: "Frieren" },
   { path: "/Akaza", label: "Akaza" },
   { path: "/YaeMiko", label: "YaeMiko" },
-  { path: "/Tester", label: "Test"}
+  { path: "/Tester", label: "Test" }
 ];
 
 export default function Menu() {
@@ -67,7 +67,6 @@ export default function Menu() {
       tlRef.current.reverse();
       document.body.style.overflow = "";
     }
-    // cleanup on unmount
     return () => {
       document.body.style.overflow = "";
     };
@@ -90,8 +89,8 @@ export default function Menu() {
 
   return (
     <div ref={rootRef} className="relative">
-      {/* Top bar */}
-      <div className="flex items-center justify-between px-6 py-4 bg-neutral-950 text-white">
+      {/* Top bar — โปร่งใส กลืนพื้นหลัง และลอยบนสุด */}
+      <div className="flex items-center justify-between px-6 py-4 bg-black/30 backdrop-blur-sm text-white absolute top-0 left-0 w-full z-50">
         <div className="text-lg font-semibold">
           <Link href="/" className="hover:opacity-80 transition">
             Whiskey.dev
