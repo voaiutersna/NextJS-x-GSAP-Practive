@@ -4,16 +4,23 @@ import { gsap } from "gsap";
 
 export default function Akaza() {
   const Allletter = useRef(null)
-  useEffect(()=>{
-    const texts = Allletter.current.querySelectorAll(".texter");
-    gsap.from(texts,{
-      y:50,
-      stagger:0.2,
-      duration:8,
-      ease:"back.out(1.7)",
-      opacity:0
-    })
-  },[])
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      if (!Allletter.current) return;
+      const texts = Allletter.current.querySelectorAll(".texter");
+      gsap.from(texts, {
+        y: 50,
+        stagger: 0.2,
+        duration: 2,
+        ease: "back.out(1.7)",
+        opacity: 0,
+        yoyo:true,
+        repeat:-1,
+        repeatDelay:2
+      })
+    }, 700);
+    return () => clearTimeout(timer);
+  }, [])
   return (
     <div className="relative h-screen w-screen overflow-hidden">
       <video className="absolute inset-0 h-full w-full object-cover -z-10" src="/vdo_akaza.mp4" autoPlay loop muted playsInline />

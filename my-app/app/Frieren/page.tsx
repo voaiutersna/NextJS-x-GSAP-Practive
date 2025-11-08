@@ -4,20 +4,19 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
 export default function Frieren() {
-  const frieren = useRef<HTMLImageElement | null>(null);
-  const logo = useRef<HTMLImageElement | null>(null);
+  const frieren = useRef(null);
+  const logo = useRef(null);
 
   useEffect(() => {
     // ใช้ timeline เพื่อควบคุมลำดับ
-    const tl = gsap.timeline();
     gsap.fromTo(frieren.current,
-      { y: 200 },
-      { y: 65, duration: 2, ease: "power3.out" })
+      { y: 500 },
+      { y: 65, duration: 2, ease: "power3.out",delay:1 })
     // frieren ลอยขึ้นนิดเดียว พร้อม fade-in
     // logo ตามมาทีหลังนิดนึง
     gsap.fromTo(logo.current,
       { opacity: 0, y: -280 },
-      { opacity: 1, y: -100, duration: 2, ease: "power3.out" }, // overlap เข้ามานิดหน่อย
+      { opacity: 1, y: -100, duration: 2, ease: "power3.out",delay:1 }, // overlap เข้ามานิดหน่อย
     );
   }, []);
 
@@ -40,7 +39,7 @@ export default function Frieren() {
         alt="Frieren"
         width={900}
         height={900}
-        className="absolute left-[20%] top-1/2 -translate-y-1/2 pointer-events-none select-none"
+        className="absolute left-[25%] top-1/2 -translate-y-1/2 pointer-events-none select-none"
         priority
       />
     </div>

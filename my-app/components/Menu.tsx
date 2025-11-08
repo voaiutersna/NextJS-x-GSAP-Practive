@@ -7,8 +7,7 @@ const MENU_LINKS = [
   { path: "/", label: "Home" },
   { path: "/Frieren", label: "Frieren" },
   { path: "/Akaza", label: "Akaza" },
-  { path: "/YaeMiko", label: "YaeMiko" },
-  { path: "/Tester", label: "Test" }
+  { path: "/Sachiro", label: "Sachiro" },
 ];
 
 export default function Menu() {
