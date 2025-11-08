@@ -8,7 +8,6 @@ export default function Frieren() {
   const logo = useRef(null);
 
   useEffect(() => {
-    // ใช้ timeline เพื่อควบคุมลำดับ
     gsap.fromTo(frieren.current,
       { y: 500 },
       { y: 65, duration: 2, ease: "power3.out",delay:1 })
