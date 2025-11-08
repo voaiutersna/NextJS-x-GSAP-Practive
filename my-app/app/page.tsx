@@ -13,7 +13,7 @@ export default function Home() {
 
     console.log("Already use effect")
     const tl = gsap.timeline({defaults:{yoyo:true,repeat:-1,repeatDelay:5}})
-    tl.from(text1.current,{y:-100,duration:2},0).from(text2.current,{y:50,duration:2},0) //ใส่0 ให้มันเริ่มพร้อมกัน
+    tl.from(text1.current,{y:-100,duration:2,opacity:0},0).from(text2.current,{y:50,duration:2,opacity:0},0) //ใส่0 ให้มันเริ่มพร้อมกัน
     }, 800);
     return () => clearTimeout(timer);
   },[])
