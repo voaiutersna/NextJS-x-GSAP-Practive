@@ -10,12 +10,12 @@ export default function Frieren() {
   useEffect(() => {
     gsap.fromTo(frieren.current,
       { y: 500 },
-      { y: 65, duration: 2, ease: "power3.out",delay:1 })
+      { y: 65, duration: 2, ease: "power3.out",delay:1.2 })
     // frieren ลอยขึ้นนิดเดียว พร้อม fade-in
     // logo ตามมาทีหลังนิดนึง
     gsap.fromTo(logo.current,
       { opacity: 0, y: -280 },
-      { opacity: 1, y: -100, duration: 2, ease: "power3.out",delay:1 }, // overlap เข้ามานิดหน่อย
+      { opacity: 1, y: -100, duration: 2, ease: "power3.out",delay:1.2 }, // overlap เข้ามานิดหน่อย
     );
   }, []);
 

@@ -18,7 +18,7 @@ export default function Akaza() {
         repeat:-1,
         repeatDelay:2
       })
-    }, 700);
+    }, 800);
     return () => clearTimeout(timer);
   }, [])
   return (

@@ -9,9 +9,13 @@ export default function Home() {
   const text2 = useRef(null)
   useEffect(()=>{
     // const text = texts.current.querySelector(".texter")
+    const timer = setTimeout(() => {
+
     console.log("Already use effect")
     const tl = gsap.timeline({defaults:{yoyo:true,repeat:-1,repeatDelay:5}})
-    tl.from(text1.current,{y:-100,duration:2},0).from(text2.current,{y:50,duration:2},0)
+    tl.from(text1.current,{y:-100,duration:2},0).from(text2.current,{y:50,duration:2},0) //ใส่0 ให้มันเริ่มพร้อมกัน
+    }, 800);
+    return () => clearTimeout(timer);
   },[])
 
   return (
